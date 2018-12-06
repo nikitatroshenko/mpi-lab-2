@@ -10,7 +10,7 @@
 
 double f(double x) {
 //    return sin(x);
-    return x * x / 1e10;
+    return x * x / 1.8e16;
 }
 
 struct task_specification {
@@ -43,7 +43,7 @@ double integrate(
 
 int main(int argc, char **argv) {
 
-    const struct task_specification task_spec = {f, -1e5, 1e5};
+    const struct task_specification task_spec = {f, -3e5, 3e5};
     struct configuration *config = parse_args(argc, argv);
 
     MPI_Init(&argc, &argv);
