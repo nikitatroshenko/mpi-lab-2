@@ -6,4 +6,4 @@ set(CMAKE_C_COMPILER mpicc)
 
 link_libraries(m)
 
-add_executable(mpi_lab_2 main.c)
+add_executable(mpi-lab-2 main.c)

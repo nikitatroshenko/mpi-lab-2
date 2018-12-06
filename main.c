@@ -9,7 +9,8 @@
 #define MPI_TASK_BODY_TAG 2
 
 double f(double x) {
-    return sin(x);
+//    return sin(x);
+    return x * x / 1e10;
 }
 
 struct task_specification {
@@ -171,7 +172,7 @@ void executor_routine(
             break;
         }
 
-        struct task_specification block_spec = {f, task_body[0], task_body[1]};
+        struct task_specification block_spec = {spec->func, task_body[0], task_body[1]};
         result = integrate(&block_spec, config);
         fprintf(stderr, "Executor: next result is ready: %lf\n", result);
     } while (1);
