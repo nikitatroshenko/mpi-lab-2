@@ -43,7 +43,7 @@ double integrate(
 
 int main(int argc, char **argv) {
 
-    const struct task_specification task_spec = {f, -1e10, 1e10};
+    const struct task_specification task_spec = {f, -1e5, 1e5};
     struct configuration *config = parse_args(argc, argv);
 
     MPI_Init(&argc, &argv);
